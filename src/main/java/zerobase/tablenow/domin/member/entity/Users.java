@@ -1,9 +1,15 @@
 package zerobase.tablenow.domin.member.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import zerobase.tablenow.domin.baseEntity.BaseEntity;
 import zerobase.tablenow.domin.member.constant.Role;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "User")
 public class Users extends BaseEntity {
