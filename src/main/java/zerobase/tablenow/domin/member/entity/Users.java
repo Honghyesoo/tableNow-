@@ -3,6 +3,7 @@ package zerobase.tablenow.domin.member.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import zerobase.tablenow.domin.baseEntity.BaseEntity;
 import zerobase.tablenow.domin.member.constant.Role;
@@ -11,6 +12,7 @@ import zerobase.tablenow.domin.member.constant.Role;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Data
 @Table(name = "User")
 public class Users extends BaseEntity {
     @Id
