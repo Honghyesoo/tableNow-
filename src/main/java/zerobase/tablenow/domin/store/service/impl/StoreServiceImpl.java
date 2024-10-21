@@ -3,7 +3,6 @@ package zerobase.tablenow.domin.store.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import zerobase.tablenow.domin.store.dto.StoreDto;
-import zerobase.tablenow.domin.store.entity.Stores;
 import zerobase.tablenow.domin.store.repository.StoreRepository;
 import zerobase.tablenow.domin.store.service.StoreService;
 

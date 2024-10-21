@@ -13,4 +13,5 @@ public interface UserRepository extends JpaRepository<Users,Long>{
     //userId로 회원을 찾는 메서드
     Optional<Users> findByUserId(String userId);
 
+    Optional<Users> findByEmailAuthKey(String uuid);
 }

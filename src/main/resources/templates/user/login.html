@@ -2,30 +2,42 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>fastlms</title>
+  <title>Login</title>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+    window.onload = function() {
+        var message = /*[[${message}]]*/ null;
+        if (message) {
+            alert(message);
+        }
+    }
+    /*]]>*/
+  </script>
 </head>
 <body>
-  <div th:fragment="fragment-body-menu">
-    <form method="post">
-      <div>
-        <input type="text" name="userId" placeholder="아이디" required>
-      </div>
 
-      <div>
-        <input type="password" name="password" placeholder="비밀번호" required>
-      </div>
+<h1>회원 로그인</h1>
 
-      <div>
-        <button type="submit">로그인</button>
-      </div>
+<div th:text="${errorMessage}"></div>
 
-    </form>
-    <div>
-      <a href="/register">회원가입</a>
-      <a href="/">비밀번호 찾기</a>
-    </div>
-
+<form method="post" id="loginForm">
+  <div>
+    <input type="text" name="username" id="username" placeholder="아이디(이메일)" required>
   </div>
 
+  <div>
+    <input type="password" name="password" placeholder="비밀번호" required>
+  </div>
+
+  <div>
+    <button type="submit">로그인</button>
+  </div>
+</form>
+<hr/>
+
+<div>
+  <a href="/register">회원가입</a>
+  <a href="/">비밀번호 찾기</a>
+</div>
 </body>
 </html>

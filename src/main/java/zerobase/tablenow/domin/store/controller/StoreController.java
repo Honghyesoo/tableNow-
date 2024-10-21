@@ -16,7 +16,7 @@ import java.util.List;
 public class StoreController {
     private final StoreService storeService;
 
-    @GetMapping("store/list")
+    @GetMapping("order/list")
     public String store(Model model) {
         List<StoreDto> stores = storeService.list();
         model.addAttribute("stores",stores);
